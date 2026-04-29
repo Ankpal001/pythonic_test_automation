@@ -19,7 +19,7 @@ class DriverFactory:
         driver_path = ChromeDriverManager().install()
 
         # 🔥 FIX: ensure correct executable (not THIRD_PARTY file)
-        options.binary_location = "/usr/bin/chromium"
+        options.binary_location = "/usr/bin/chromium-browser"
 
         driver = webdriver.Chrome(options=options)
         return driver
