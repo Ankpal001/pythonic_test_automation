@@ -11,5 +11,13 @@ class DriverFactory:
         options.add_argument("--headless = new")
         options.add_argument("--no-sandbox")
         options.add_argument("--disable-dev-shm-usage")
-        driver = webdriver.Chrome(options = options, service = Service(ChromeDriverManager().install()))
+        driver_path = ChromeDriverManager().install()
+
+        # 🔥 FIX: ensure correct executable (not THIRD_PARTY file)
+        if "THIRD_PARTY" in driver_path:
+            driver_path = driver_path.replace("THIRD_PARTY_NOTICES.chromedriver", "chromedriver")
+
+        service = Service(driver_path)
+
+        driver = webdriver.Chrome(service=service, options=options)
         return driver
