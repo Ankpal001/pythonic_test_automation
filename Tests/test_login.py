@@ -5,12 +5,14 @@ import pytest
 
 class TestLogin(BaseTest):
     @pytest.mark.smoke
+    @pytest.mark.regression
     def test_login(self):
         self.lp = LoginPage(self.driver)
         self.lp.launch_login_page()
         actual_page_title = self.lp.page_title()
         assert actual_page_title == TestData.expected_page_title
     @pytest.mark.sanity
+    @pytest.mark.regression
     def test_login_user(self):
         self.lp = LoginPage(self.driver)
         self.lp.launch_login_page()
