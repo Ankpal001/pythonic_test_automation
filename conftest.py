@@ -22,6 +22,7 @@ def pytest_runtest_makereport(item, call):
         if isinstance(driver, WebDriver):
             # Attach screenshot to Allure
             allure.attach(
+
                 driver.get_screenshot_as_png(),
                 name="failure-screenshot",
                 attachment_type=allure.attachment_type.PNG
