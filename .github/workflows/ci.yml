@@ -28,8 +28,8 @@ jobs:
     - name: Setup Chromedriver
       uses: nanasess/setup-chromedriver@v2
 
-    - name: Run Smoke Tests
-      run: python -m pytest -m smoke --alluredir=allure-results
+    - name: Run Smoke Tests in parallel
+      run: python -m pytest -m smoke -n auto --dist=loadscope --alluredir=allure-results
     - name: Run Regression Tests
       run: python -m pytest -m regression --alluredir=allure-results
 
