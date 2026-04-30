@@ -1,2 +1,3 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Thu Apr 30 09:03:59 UTC 2026","Thu Apr 30 09:04:00 UTC 2026","430","Tests","test_login","TestLogin","","","test_login",""
+"passed","Thu Apr 30 14:36:19 UTC 2026","Thu Apr 30 14:36:19 UTC 2026","249","Tests","test_login","TestLogin","","","test_login",""
+"passed","Thu Apr 30 14:36:19 UTC 2026","Thu Apr 30 14:36:20 UTC 2026","506","Tests","test_login","TestLogin","","","test_login_user",""
